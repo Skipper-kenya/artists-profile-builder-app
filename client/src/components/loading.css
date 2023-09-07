@@ -1,0 +1,7 @@
+.Loading {
+  width: 70px;
+  height: 7px;
+  border: 5px solid grey;
+  border-radius: 50%;
+  border-top-color: blue;
+}

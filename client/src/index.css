@@ -1,0 +1,22 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-wrapper {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(white, rgb(229, 235, 229), honeydew);
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(60, 165, 165);
+}

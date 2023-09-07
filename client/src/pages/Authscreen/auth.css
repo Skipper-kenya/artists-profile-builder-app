@@ -1,0 +1,74 @@
+.auth-wrapper {
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(honeydew, rgb(171, 227, 171), rgb(158, 210, 180)); */
+  flex-direction: column;
+}
+.auth-wrapper p {
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.auth {
+  width: 300px;
+  height: auto;
+  background-color: rgb(212, 237, 212);
+  padding: 10px;
+  border: 1px solid black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-top: 3px solid orangered;
+  border-bottom: 3px solid orangered;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+.auth h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+.auth p {
+  text-align: center;
+}
+.inputs label {
+  font-weight: 600;
+  padding-top: 0.1rem;
+  display: block;
+}
+.inputs input {
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  width: 100%;
+  outline: 0;
+}
+.inputs input:focus {
+  border-color: seagreen;
+  transition: 0.3s;
+}
+.inputs small{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(226, 144, 144);
+}
+.auth button {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: none;
+  background-color: rgb(7, 82, 39);
+
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.auth button:hover {
+  background-color: seagreen;
+  transition: 0.4s;
+  letter-spacing: 2px;
+}

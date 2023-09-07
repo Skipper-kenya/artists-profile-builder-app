@@ -1,0 +1,183 @@
+.home-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  min-height: calc(100vh - 70px);
+}
+.home-top {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-top h3 {
+  color: rgb(42, 105, 105);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 24px;
+}
+.home-top p {
+  text-align: center;
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.home-top p button {
+  padding: 10px;
+  border: 1px solid rgb(205, 189, 189);
+  cursor: pointer;
+  background-color: rgb(205, 189, 189);
+  background-color: rgb(67, 61, 61);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.home-top p button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+}
+
+/*HOME FILTER*/
+.artists-filter {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inp {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.artists-filter input {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid rgb(205, 189, 189);
+  outline: 0;
+  font-size: 18px;
+  position: relative;
+}
+
+.artists-filter input:focus {
+  transition: 0.4s;
+  border-color: 1px solid rgb(42, 105, 105);
+}
+
+/*PROFILES STYLING*/
+
+.artists-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.profile {
+  box-shadow: 0 2px 6px;
+  padding: 6px;
+  margin: 0.5rem 0;
+  width: 400px;
+  border-bottom: 3px solid rgb(42, 105, 105);
+  border-top: 3px solid rgb(42, 105, 105);
+  height: 250px;
+  overflow-y: scroll;
+  position: relative;
+}
+.saveBtn {
+  position: absolute;
+  right: 0;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+  font-family: arial;
+  border: 1px solid rgb(205, 189, 189);
+}
+.profile-top {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  height: 170px;
+}
+.img {
+  width: 60%;
+  box-shadow: 0 2px 3px;
+  overflow: hidden;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 4px;
+}
+.prof-intro {
+  width: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px 10px;
+}
+.prof-intro h2 {
+  font-weight: bold;
+  padding-top: 0.3rem;
+  font-size: 16px;
+}
+.prof-intro p {
+  padding: 0.5rem 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.profile-bottom {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: rgb(42, 105, 105);
+  border-top: 1px dotted;
+}
+
+@media only screen and (min-width: 849px) and (max-width: 1004px) {
+  .profile {
+    width: 220px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1004px) {
+  .profile {
+    width: 250px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 849px) {
+  .home-wrapper {
+    width: 90%;
+  }
+  .home-top h3 {
+    font-size: 18px;
+  }
+  .home-top p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .saveBtn {
+    font-size: 13px;
+  }
+  .prof-intro h2 {
+    font-size: 16px;
+  }
+  .profile {
+    width: 200px;
+    height: 300px;
+  }
+}
