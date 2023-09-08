@@ -17,7 +17,10 @@ app.get("/trial", (req, res) => {
   res.json({ message: "HEY AMIGO YOU HAVE REACHED US " });
 });
 
-const port = 5000;
+// 
 connectDb(() => {
-  app.listen(port, console.log(`server running at port ${port}`));
+  app.listen(
+    "https://artists-profile-builder-app.onrender.com",
+    console.log(`server running at port specified`)
+  );
 });
