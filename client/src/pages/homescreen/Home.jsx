@@ -25,8 +25,9 @@ const Home = () => {
   useEffect(() => {
     const fetchProfiles = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/profiles");
-        // https://artists-profile-builder-app.onrender.com/profiles
+        const response = await axios.get(
+          "https://artists-profile-builder-app.onrender.com/profiles"
+        );
 
         setProfiles(response.data);
         setProfiles2(response.data);

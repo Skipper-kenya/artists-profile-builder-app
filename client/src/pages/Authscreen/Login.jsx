@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     if (username !== "" && password !== "") {
       try {
-        const response = await axios.post("http://localhost:5000/auth/login", {
+        const response = await axios.post("https://artists-profile-builder-app.onrender.com/auth/login", {
           username,
           password,
         });

@@ -29,14 +29,17 @@ const Controller = () => {
     if (isInputFilled()) {
       if (cookie.access_token) {
         try {
-          const response = await axios.post("http://localhost:5000/profiles", {
-            fname,
-            sname,
-            genre,
-            url,
-            country,
-            description,
-          });
+          const response = await axios.post(
+            "https://artists-profile-builder-app.onrender.com/profiles",
+            {
+              fname,
+              sname,
+              genre,
+              url,
+              country,
+              description,
+            }
+          );
 
           const { message } = response.data;
           alert(message);

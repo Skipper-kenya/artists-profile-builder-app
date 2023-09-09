@@ -2,7 +2,6 @@ import { Star } from "phosphor-react";
 import React, { useEffect, useState } from "react";
 import useGetUserDetails from "../../hooks/useGetUserDetails";
 import axios from "axios";
-import Loading from "../../components/Loading";
 
 const Profiles = ({ profiles, cookie }) => {
   const [savedProfiles, setSavedProfiles] = useState([]);
@@ -11,10 +10,13 @@ const Profiles = ({ profiles, cookie }) => {
 
   const handleSaveToFavorites = async (profileId) => {
     try {
-      const response = await axios.put("http://localhost:5000/profiles", {
-        profileId,
-        userId,
-      });
+      const response = await axios.put(
+        "https://artists-profile-builder-app.onrender.com/profiles",
+        {
+          profileId,
+          userId,
+        }
+      );
 
       const { updatedFavorites, message } = await response.data;
 
@@ -30,7 +32,7 @@ const Profiles = ({ profiles, cookie }) => {
       if (cookie.access_token) {
         try {
           const response = await axios.get(
-            `http://localhost:5000/profiles/ids/${userId}`
+            `https://artists-profile-builder-app.onrender.com/profiles/ids/${userId}`
           );
 
           const profileCopy = response.data.slice();

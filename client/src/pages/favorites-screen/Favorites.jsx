@@ -14,13 +14,12 @@ const Favorites = () => {
   const [_, userId] = useGetUserDetails();
   const { cookie } = useContext(GlobalProvider);
 
-
   useEffect(() => {
     const fetchSavedFavorites = async () => {
       if (cookie.access_token) {
         try {
           const response = await axios.get(
-            `http://localhost:5000/profiles/allIds/${userId}`
+            `https://artists-profile-builder-app.onrender.com/profiles/allIds/${userId}`
           );
 
           const userSaved = response.data;
