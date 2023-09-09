@@ -17,5 +17,8 @@ app.use("/auth", UserRouter);
 app.use("/profiles", profilesRouter);
 
 connectDb(() => {
-  app.listen(process.env.port, console.log(`server running at port $`));
+  app.listen(
+    process.env.port,
+    console.log(`server running at port ${process.env.port}`)
+  );
 });
