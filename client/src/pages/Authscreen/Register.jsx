@@ -33,7 +33,7 @@ const Register = () => {
         if (password === password2) {
           try {
             const response = await axios.post(
-              "https://artists-profile-builder-app.onrender.com/auth/register",
+              `${process.env.REACT_APP_SERVER_API}/auth/register`,
               { username, password, phone, dob }
             );
 

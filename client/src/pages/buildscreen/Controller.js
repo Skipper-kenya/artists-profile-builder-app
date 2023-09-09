@@ -30,7 +30,7 @@ const Controller = () => {
       if (cookie.access_token) {
         try {
           const response = await axios.post(
-            "https://artists-profile-builder-app.onrender.com/profiles",
+            `${process.env.REACT_APP_SERVER_API}/profiles`,
             {
               fname,
               sname,

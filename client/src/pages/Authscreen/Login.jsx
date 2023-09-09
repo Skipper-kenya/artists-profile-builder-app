@@ -17,10 +17,13 @@ const Login = () => {
     e.preventDefault();
     if (username !== "" && password !== "") {
       try {
-        const response = await axios.post("https://artists-profile-builder-app.onrender.com/auth/login", {
-          username,
-          password,
-        });
+        const response = await axios.post(
+          `${process.env.REACT_APP_SERVER_API}/auth/login`,
+          {
+            username,
+            password,
+          }
+        );
 
         const { token, userId, message, action, user_name } =
           await response.data;

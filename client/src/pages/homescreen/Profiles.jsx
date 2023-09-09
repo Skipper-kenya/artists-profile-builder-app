@@ -12,7 +12,7 @@ const Profiles = ({ profiles, cookie, loading }) => {
   const handleSaveToFavorites = async (profileId) => {
     try {
       const response = await axios.put(
-        "https://artists-profile-builder-app.onrender.com/profiles",
+        `${process.env.REACT_APP_SERVER_API}/profiles`,
         {
           profileId,
           userId,
@@ -33,7 +33,7 @@ const Profiles = ({ profiles, cookie, loading }) => {
       if (cookie.access_token) {
         try {
           const response = await axios.get(
-            `https://artists-profile-builder-app.onrender.com/profiles/ids/${userId}`
+            `${process.env.REACT_APP_SERVER_API}/profiles/ids/${userId}`
           );
 
           const profileCopy = response.data.slice();

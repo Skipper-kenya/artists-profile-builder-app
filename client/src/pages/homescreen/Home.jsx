@@ -30,7 +30,7 @@ const Home = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://artists-profile-builder-app.onrender.com/profiles"
+          `${process.env.REACT_APP_SERVER_API}/profiles`
         );
         setProfiles(response.data);
         setProfiles2(response.data);

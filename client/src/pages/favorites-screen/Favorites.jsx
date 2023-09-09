@@ -23,7 +23,7 @@ const Favorites = () => {
         setLoading(true);
         try {
           const response = await axios.get(
-            `https://artists-profile-builder-app.onrender.com/profiles/allIds/${userId}`
+            `${process.env.REACT_APP_SERVER_API}/profiles/allIds/${userId}`
           );
 
           const userSaved = response.data;
