@@ -11,6 +11,7 @@ import { GlobalProvider } from "../../context/GlobalContext";
 import useGetUserDetails from "../../hooks/useGetUserDetails";
 import axios from "axios";
 import Profiles from "./Profiles";
+import Loading from "../../components/Loading";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,17 +23,21 @@ const Home = () => {
   const { cookie } = useContext(GlobalProvider);
   const [user_name] = useGetUserDetails();
 
+  const [loading, setLoading] = useState();
+
   useEffect(() => {
     const fetchProfiles = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           "https://artists-profile-builder-app.onrender.com/profiles"
         );
-
         setProfiles(response.data);
         setProfiles2(response.data);
+        setLoading(false);
       } catch (error) {
         console.error(error.message);
+        setLoading(false);
       }
     };
     fetchProfiles();
@@ -88,7 +93,7 @@ const Home = () => {
         </section>
 
         <section className="artists-profile">
-          <Profiles profiles={profiles} cookie={cookie} />
+          <Profiles profiles={profiles} cookie={cookie} loading={loading} />
         </section>
       </div>
     </div>

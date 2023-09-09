@@ -2,8 +2,9 @@ import { Star } from "phosphor-react";
 import React, { useEffect, useState } from "react";
 import useGetUserDetails from "../../hooks/useGetUserDetails";
 import axios from "axios";
+import Loading from "../../components/Loading";
 
-const Profiles = ({ profiles, cookie }) => {
+const Profiles = ({ profiles, cookie, loading }) => {
   const [savedProfiles, setSavedProfiles] = useState([]);
 
   const [user_name, userId] = useGetUserDetails();
@@ -49,8 +50,10 @@ const Profiles = ({ profiles, cookie }) => {
 
   return (
     <>
-      {profiles ? (
-        profiles?.map((profile, idx) => {
+      {loading ? (
+        <Loading />
+      ) : (
+        profiles.map((profile, idx) => {
           return (
             <div className="profile" key={idx}>
               {cookie.access_token ? (
@@ -83,8 +86,6 @@ const Profiles = ({ profiles, cookie }) => {
             </div>
           );
         })
-      ) : (
-        <h2>Loading...</h2>
       )}
     </>
   );

@@ -51,6 +51,8 @@ const Controller = () => {
             country: "",
             description: "",
           });
+
+          navigate("/");
         } catch (error) {
           console.error(error.message);
         }

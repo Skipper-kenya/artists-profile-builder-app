@@ -7,6 +7,7 @@ import { GlobalProvider } from "../../context/GlobalContext";
 
 import deny from "./deny.png";
 import { Link } from "react-router-dom";
+import Loading from "../../components/Loading";
 
 const Favorites = () => {
   const [profiles, setProfiles] = useState([]);
@@ -14,9 +15,12 @@ const Favorites = () => {
   const [_, userId] = useGetUserDetails();
   const { cookie } = useContext(GlobalProvider);
 
+  const [loading, setLoading] = useState();
+
   useEffect(() => {
     const fetchSavedFavorites = async () => {
       if (cookie.access_token) {
+        setLoading(true);
         try {
           const response = await axios.get(
             `https://artists-profile-builder-app.onrender.com/profiles/allIds/${userId}`
@@ -25,8 +29,10 @@ const Favorites = () => {
           const userSaved = response.data;
           const profileCopy = userSaved.slice();
           setProfiles(profileCopy);
+          setLoading(false);
         } catch (error) {
           console.error(error.message);
+          setLoading(false);
         }
       }
     };
@@ -36,27 +42,31 @@ const Favorites = () => {
   return (
     <div className="favorites-wrapper">
       {cookie.access_token ? (
-        <>
-          {profiles?.map((profile, idx) => {
-            return (
-              <div className="profile" key={idx}>
-                <section className="profile-top">
-                  <div className="img">
-                    <img src={profile.url} alt={profile.fname} />
-                  </div>
-                  <div className="prof-intro">
-                    <h2>{profile.fname}</h2>
-                    <p>{profile.country}</p>
-                    <p>{profile.genre}</p>
-                  </div>
-                </section>
-                <section className="profile-bottom">
-                  <h5>{profile.description}</h5>
-                </section>
-              </div>
-            );
-          })}
-        </>
+        loading ? (
+          <Loading />
+        ) : (
+          <>
+            {profiles?.map((profile, idx) => {
+              return (
+                <div className="profile" key={idx}>
+                  <section className="profile-top">
+                    <div className="img">
+                      <img src={profile.url} alt={profile.fname} />
+                    </div>
+                    <div className="prof-intro">
+                      <h2>{profile.fname}</h2>
+                      <p>{profile.country}</p>
+                      <p>{profile.genre}</p>
+                    </div>
+                  </section>
+                  <section className="profile-bottom">
+                    <h5>{profile.description}</h5>
+                  </section>
+                </div>
+              );
+            })}
+          </>
+        )
       ) : (
         <div className="favorites-illustration">
           <h3>
