@@ -13,6 +13,8 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [dob, setDob] = useState("");
 
+  const [loading, setLoading] = useState();
+
   const navigate = useNavigate();
 
   const isInputFilled = () => {
@@ -31,6 +33,7 @@ const Register = () => {
     if (isInputFilled()) {
       if (username.length >= 5 && password.length >= 6) {
         if (password === password2) {
+          setLoading(true);
           try {
             const response = await axios.post(
               `${process.env.REACT_APP_SERVER_API}/auth/register`,
@@ -39,9 +42,11 @@ const Register = () => {
 
             const { message } = response.data;
             alert(message);
+            setLoading(false);
             navigate("/login");
           } catch (error) {
             console.log(error);
+            setLoading(false);
           }
         } else {
           alert("Password did not match.");
@@ -72,6 +77,7 @@ const Register = () => {
         setPhone={setPhone}
         dob={dob}
         setDob={setDob}
+        loading={loading}
       />
     </div>
   );

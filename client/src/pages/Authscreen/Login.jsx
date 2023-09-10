@@ -13,10 +13,13 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (username !== "" && password !== "") {
       try {
+        setLoading(true);
         const response = await axios.post(
           `${process.env.REACT_APP_SERVER_API}/auth/login`,
           {
@@ -32,10 +35,13 @@ const Login = () => {
           setCookie("access_token", token);
           window.localStorage.setItem("userId", userId);
           window.localStorage.setItem("user_name", user_name);
+
           navigate("/");
         }
         alert(message);
+        setLoading(false);
       } catch (error) {
+        setLoading(false);
         console.log(error.message);
       }
     } else {
@@ -53,6 +59,7 @@ const Login = () => {
         password={password}
         setPassword={setPassword}
         handleSubmit={handleSubmit}
+        loading={loading}
       />
     </div>
   );

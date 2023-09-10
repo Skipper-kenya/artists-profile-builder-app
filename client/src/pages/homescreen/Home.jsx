@@ -24,6 +24,7 @@ const Home = () => {
   const [user_name] = useGetUserDetails();
 
   const [loading, setLoading] = useState();
+  const [loadingSearch, setloadingSearch] = useState();
 
   useEffect(() => {
     const fetchProfiles = async () => {

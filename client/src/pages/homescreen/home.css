@@ -1,9 +1,12 @@
 .home-wrapper {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  height: auto;
-  min-height: calc(100vh - 70px);
 }
 .home-top {
   height: 140px;
@@ -49,20 +52,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgb(67, 61, 61);
 }
 .inp {
   display: flex;
   width: fit-content;
   align-items: center;
+  width: 90%;
+  height: auto;
+  justify-content: center;
   margin-right: 1rem;
 }
 
 .artists-filter input {
   padding: 10px;
-  width: 400px;
+  width: 100%;
   border: 1px solid rgb(205, 189, 189);
   outline: 0;
   font-size: 18px;
+  text-align: center;
   position: relative;
 }
 
@@ -154,12 +162,27 @@
   }
 }
 @media only screen and (min-width: 1004px) {
+  .artists-profile {
+    width: 100%;
+  }
   .profile {
-    width: 250px;
+    width: 30%;
     height: 300px;
   }
 }
-@media only screen and (max-width: 849px) {
+@media only screen and (max-width: 600px) {
+  .home-wrapper {
+    width: 98%;
+  }
+  .artists-profile {
+    width: 100%;
+  }
+  .profile {
+    width: 48%;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 849px) {
   .home-wrapper {
     width: 90%;
   }
@@ -176,8 +199,11 @@
   .prof-intro h2 {
     font-size: 16px;
   }
+  .artists-profile {
+    width: 100%;
+  }
   .profile {
-    width: 200px;
+    width: 32%;
     height: 300px;
   }
 }

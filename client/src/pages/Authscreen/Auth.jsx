@@ -15,7 +15,13 @@ const Auth = ({
   setPhone,
   dob,
   setDob,
+  loading,
 }) => {
+  const hasUserSubmit = () => (isLogin || !isLogin) && loading;
+
+  const loginUserNoSubmit = () => isLogin && !loading;
+  const registerUserNoSubmit = () => !isLogin && !loading;
+
   return (
     <form className="auth" onSubmit={handleSubmit}>
       <h3>{isLogin ? "Login" : "Register"}</h3>
@@ -98,7 +104,9 @@ const Auth = ({
       )}
 
       <button type="submit" onClick={handleSubmit}>
-        {isLogin ? "Login" : "Create Account"}
+        {hasUserSubmit() && "Loading..."}
+        {loginUserNoSubmit() && "Login"}
+        {registerUserNoSubmit() && "Register"}
       </button>
     </form>
   );

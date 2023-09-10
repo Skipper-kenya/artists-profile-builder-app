@@ -2,7 +2,7 @@ import { UserCircleGear } from "phosphor-react";
 import React, { useContext, useState } from "react";
 import { BuildProvider } from "./BuildContext";
 
-const BuildInputs = ({ handleSubmit }) => {
+const BuildInputs = ({ handleSubmit, loading }) => {
   const { inputs, setInputs } = useContext(BuildProvider);
 
   const { fname, sname, genre, description, url, country } = inputs;
@@ -74,7 +74,9 @@ const BuildInputs = ({ handleSubmit }) => {
         rows="2"
         onChange={handleChanges}
       />
-      <button onClick={handleSubmit}>Create Profile</button>
+      <button onClick={handleSubmit}>
+        {loading ? "Loading..." : "Create a Profile"}
+      </button>
     </form>
   );
 };
