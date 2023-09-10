@@ -54,10 +54,14 @@ const Home = () => {
       return profile.fname.toLowerCase().includes(value.toLowerCase());
     });
 
-    if (value.length > 0) {
+    if (value.length > 0 && filterNameProfiles.length > 0) {
       setProfiles(filterNameProfiles);
+      setloadingSearch(false);
+    } else if (value.length > 0 && filterNameProfiles.length === 0) {
+      setloadingSearch(true);
     } else {
       setProfiles(copy2);
+      setloadingSearch(false);
     }
   };
 
@@ -94,7 +98,12 @@ const Home = () => {
         </section>
 
         <section className="artists-profile">
-          <Profiles profiles={profiles} cookie={cookie} loading={loading} />
+          <Profiles
+            profiles={profiles}
+            cookie={cookie}
+            loading={loading}
+            loadingSearch={loadingSearch}
+          />
         </section>
       </div>
     </div>

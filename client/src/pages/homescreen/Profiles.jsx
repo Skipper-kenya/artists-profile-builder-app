@@ -4,7 +4,7 @@ import useGetUserDetails from "../../hooks/useGetUserDetails";
 import axios from "axios";
 import Loading from "../../components/Loading";
 
-const Profiles = ({ profiles, cookie, loading }) => {
+const Profiles = ({ profiles, cookie, loading, loadingSearch }) => {
   const [savedProfiles, setSavedProfiles] = useState([]);
 
   const [user_name, userId] = useGetUserDetails();
@@ -52,6 +52,8 @@ const Profiles = ({ profiles, cookie, loading }) => {
     <>
       {loading ? (
         <Loading />
+      ) : loadingSearch ? (
+        <p className="no-search">sorry we can't find your search.</p>
       ) : (
         profiles.map((profile, idx) => {
           return (
