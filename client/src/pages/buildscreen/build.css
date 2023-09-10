@@ -38,6 +38,7 @@
   display: block;
   font-weight: 600;
   margin: 0.2rem 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 .build-form input {
   width: 100%;
@@ -80,4 +81,12 @@
   margin: 0.5rem 0;
   font-size: 18px;
   color: red;
+  text-align: center;
+}
+.login-alert small {
+  padding: 0rem 1.5rem;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  letter-spacing: 1px;
 }

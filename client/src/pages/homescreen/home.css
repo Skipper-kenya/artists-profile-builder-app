@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=PT+Sans:ital@1&display=swap");
 .home-wrapper {
   width: 80%;
   display: flex;
@@ -9,7 +10,8 @@
   margin-right: auto;
 }
 .home-top {
-  height: 140px;
+  height: auto;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -20,14 +22,13 @@
   color: rgb(42, 105, 105);
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 24px;
 }
 .home-top p {
   text-align: center;
   font-size: 17px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 .home-top p button {
   padding: 10px;
@@ -38,6 +39,7 @@
   color: white;
   letter-spacing: 1px;
   font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
 }
 .home-top p button:hover {
   background-color: black;
@@ -140,15 +142,14 @@
 }
 .prof-intro p {
   padding: 0.5rem 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 .profile-bottom {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin: 0.5rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 17px;
   letter-spacing: 1px;
   color: rgb(42, 105, 105);

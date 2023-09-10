@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
 nav {
   height: 70px;
   width: 100%;
@@ -7,10 +8,10 @@ nav {
   border-bottom: 1px solid rgb(205, 189, 189);
   justify-content: space-around;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 .nav-label {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", serif;
   letter-spacing: 1px;
   color: rgb(60, 165, 165);
   font-style: italic;

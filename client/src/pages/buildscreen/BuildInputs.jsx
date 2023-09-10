@@ -21,7 +21,7 @@ const BuildInputs = ({ handleSubmit, loading }) => {
       </p>
       <div className="names">
         <>
-          <label htmlFor="fname">FirstName</label>
+          <label htmlFor="fname">Artist name</label>
           <input
             name="fname"
             type="text"
@@ -30,7 +30,7 @@ const BuildInputs = ({ handleSubmit, loading }) => {
             onChange={handleChanges}
           />
         </>
-        <>
+        {/* <>
           <label htmlFor="sname">SecondName (optional)</label>
           <input
             name="sname"
@@ -39,7 +39,7 @@ const BuildInputs = ({ handleSubmit, loading }) => {
             value={sname}
             onChange={handleChanges}
           />
-        </>
+        </> */}
       </div>
       <label htmlFor="country">Country</label>
       <input

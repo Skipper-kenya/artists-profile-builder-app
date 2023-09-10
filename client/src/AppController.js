@@ -11,6 +11,7 @@ import Login from "./pages/Authscreen/Login";
 
 import ToggleNav from "./components/navbar/ToggleNav";
 import { GlobalProvider } from "./context/GlobalContext";
+import Footer from "./components/footer/Footer";
 
 const AppController = () => {
   const { isNavOpen } = useContext(GlobalProvider);
@@ -28,6 +29,7 @@ const AppController = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

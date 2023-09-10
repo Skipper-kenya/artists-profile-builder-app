@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=PT+Sans:ital@1&family=Quicksand&display=swap");
 .body-wrapper {
   width: 100%;
   position: relative;

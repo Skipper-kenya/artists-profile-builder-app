@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import BuildInputs from "./BuildInputs";
-import { Smiley, Warning } from "phosphor-react";
+import { Link, Smiley, Warning } from "phosphor-react";
 import { BuildProvider } from "./BuildContext";
 import axios from "axios";
 import { GlobalProvider } from "../../context/GlobalContext";
@@ -80,6 +80,9 @@ const Controller = () => {
         <p className="login-alert">
           <Warning />
           Login to build your Artist.
+          <br />
+          <small onClick={() => navigate("/register")}>Register</small>
+          <small onClick={() => navigate("/login")}>Login</small>
         </p>
       ) : (
         ""

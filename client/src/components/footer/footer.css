@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=PT+Sans:ital@1&display=swap");
+.footer-wrapper {
+  width: 100%;
+  height: 100px;
+  background: rgb(67, 61, 61);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
+}
+/*  border-bottom: 1px solid rgb(205, 189, 189);*/
+.top-footer {
+  padding: 0.5rem 0rem;
+}
+.top-footer svg {
+  color: white;
+  margin: 0 5px;
+}
+.top-footer svg:hover {
+  color: blue;
+  transition: 0.3s;
+}
+@media only screen and (max-width:600px){
+    
+}
