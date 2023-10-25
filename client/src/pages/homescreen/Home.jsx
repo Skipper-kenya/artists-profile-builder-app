@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
 import {
-  MagnifyingGlass,
-  MagnifyingGlassPlus,
   MusicNotes,
   Quotes,
 } from "phosphor-react";
