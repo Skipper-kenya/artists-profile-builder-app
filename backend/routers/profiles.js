@@ -57,7 +57,7 @@ router.get("/ids/:id", async (req, res) => {
 });
 
 //route to get all data id's
-
+//
 router.get("/allIds/:id", async (req, res) => {
   const userId = req.params?.id;
   if (userId) {
