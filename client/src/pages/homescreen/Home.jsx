@@ -1,9 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
-import {
-  MusicNotes,
-  Quotes,
-} from "phosphor-react";
+import { MusicNotes, Quotes } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { GlobalProvider } from "../../context/GlobalContext";
 import useGetUserDetails from "../../hooks/useGetUserDetails";
@@ -67,8 +64,7 @@ const Home = () => {
     <div className="home-wrapper">
       <div className="home-top">
         <h3>
-          Welcome {cookie.access_token ? `${user_name}` : ""} to rastaman
-          builders
+          Welcome {cookie.access_token ? `${user_name}` : ""} to rastaTech
         </h3>
         <p>
           Life is too short to live apart.

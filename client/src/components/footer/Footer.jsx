@@ -21,7 +21,10 @@ const Footer = () => {
         <Link to="mailTo:kimwetichandrew@gmail.com" target="_blank">
           <Envelope size={30} />
         </Link>
-        <Link to="https://www.linkedin.com/in/andrew-kimwetich-84070a263/" target="_blank">
+        <Link
+          to="https://www.linkedin.com/in/andrew-kimwetich-84070a263/"
+          target="_blank"
+        >
           <LinkedinLogo size={30} />
         </Link>
         <Link to="https://twitter.com/Skipper_Ke" target="_blank">
@@ -34,7 +37,7 @@ const Footer = () => {
       <div className="bottom-footer">
         <h3>
           <Copyright />
-          2023. RastamanTech. All rights reserved.
+          2023. rastaTech. All rights reserved.
         </h3>
       </div>
     </div>

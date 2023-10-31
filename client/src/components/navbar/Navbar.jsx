@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div className="nav-label">
-        <h3>Rastaman Tech</h3>
+        <h3>rastaTech</h3>
       </div>
       <p className="home-icon">
         <House onClick={handleHome} size={24} color="rgb(60, 165, 165)" />
