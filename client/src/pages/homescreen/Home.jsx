@@ -59,7 +59,7 @@ const Home = () => {
       setloadingSearch(false);
     }
   };
-
+  //comp
   return (
     <div className="home-wrapper">
       <div className="home-top">
